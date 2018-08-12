@@ -28,11 +28,13 @@ file upload api:
    		Content-Type:application/json 
    http request body:
    		{"fullname":"xxx.jpg","base64file":"dasdasdnas"}
+   http response body:
+                123456.jpg
 
 file download api: 
 	request URL: 
-    	http://xxx:10010/api/file/download?fullname=xxx.jpg 
+    	http://xxx:10010/api/file/download?fullname=123456.jpg
 file lookup api: 
     request URL: 
-   		http://xxx:10010/api/file/lookup?fullname=xxx.jpg
+   		http://xxx:10010/api/file/lookup?fullname=123456.jpg
 ```
