@@ -18,10 +18,10 @@ public class FilesystemApplication {
 //		System.setProperty("spring.data.mongodb.password", "example");
 //		System.setProperty("spring.data.mongodb.authentication-database", "admin");
 		
-		boolean hasConfig = asserNotNull();
-		if(!hasConfig) {
-			return;
-		}
+//		boolean hasConfig = asserNotNull();
+//		if(!hasConfig) {
+//			return;
+//		}
 		SpringApplication.run(FilesystemApplication.class, args);
 	}
 	

@@ -7,16 +7,16 @@ import org.springframework.stereotype.Service;
 public class FileServiceImpl implements FileService {
 	
 	@Autowired
-	private FileCommDAO fileCommDAO;
+	private FileCommDAO hdfsFileDAO;
 
 	@Override
 	public FileParam upload(FileParam upload) {
-		return fileCommDAO.upload(upload);
+		return hdfsFileDAO.upload(upload);
 	}
 
 	@Override
 	public FileParam download(FileParam download) {
-		return fileCommDAO.download(download);
+		return hdfsFileDAO.download(download);
 	}
 
 }
