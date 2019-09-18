@@ -23,7 +23,7 @@ JAVA_OPTS="-Dspring.data.mongodb.database=filesystem \
 ```
 file upload api: 
 	request URL: 
-    	http://xxx:10010/api/file/upload 
+    	http://xxx:10010/api/file/upload
    request headers: 
    		Content-Type:application/json 
    http request body:
@@ -33,8 +33,10 @@ file upload api:
 
 file download api: 
 	request URL: 
-    	http://xxx:10010/api/file/download?fullname=123456.jpg
+    	http://xxx:10010/api/file/{fullname}/download
+    exzampl: http://xxx:10010/api/file/xxx.jpg/download
 file lookup api: 
     request URL: 
-   		http://xxx:10010/api/file/lookup?fullname=123456.jpg
+   		http://xxx:10010/api/file/{fullname}/preview
+    exzampl: http://xxx:10010/api/file/xxx.jpg/preview
 ```
