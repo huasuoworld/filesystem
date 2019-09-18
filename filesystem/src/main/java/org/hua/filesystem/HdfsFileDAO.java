@@ -51,7 +51,7 @@ public class HdfsFileDAO implements FileCommDAO {
       }
 
       FileCopyUtils.copy(imageByteArray, new File(
-          "/Users/huacailiang/Downloads/zhimaide/" + UUID.randomUUID().toString() + ".png"));
+          "/tmp/" + UUID.randomUUID().toString() + ".png"));
       FileParam outfile = new FileParam();
       outfile.setFullname(filename);
       return outfile;
@@ -68,7 +68,7 @@ public class HdfsFileDAO implements FileCommDAO {
   public FileParam download(FileParam download) {
     log.info("FileDAO>>download>>" + download.toString());
     try {
-      File file = new File("/Users/huacailiang/Downloads/zhimaide/"+UUID.randomUUID().toString()+".png");
+      File file = new File("/tmp/"+UUID.randomUUID().toString()+".png");
       FileUtils.copyURLToFile(new URL(
               "http://192.168.1.210:50075/webhdfs/v1/eis/files/test/"+download.getFullname()+"?op=OPEN&namenoderpcaddress=0.0.0.0:9000&offset=0"),
           file);

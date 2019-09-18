@@ -24,7 +24,7 @@ public class HdfsUtils {
     try (CloseableHttpClient httpclient = HttpClients.createDefault()) {
       HttpPut httpPut = new HttpPut(
           "http://192.168.1.210:50075/webhdfs/v1/eis/files/test/test.png?op=CREATE&namenoderpcaddress=0.0.0.0:9000");
-      File file = new File("/Users/huacailiang/Downloads/zhimaide/screenshots.png");
+      File file = new File("/tmp/screenshots.png");
       InputStreamEntity reqEntity = new InputStreamEntity(
           new FileInputStream(file), -1, ContentType.APPLICATION_OCTET_STREAM);
       reqEntity.setChunked(true);
@@ -43,7 +43,7 @@ public class HdfsUtils {
   }
 
   public static void downloadFromHdfs() {
-    File file = new File("/Users/huacailiang/Downloads/zhimaide/123456.png");
+    File file = new File("/tmp/123456.png");
     try {
       FileUtils.copyURLToFile(new URL("http://192.168.1.210:50075/webhdfs/v1/eis/files/test/screenshots.png?op=OPEN&namenoderpcaddress=0.0.0.0:9000&offset=0"), file);
     } catch (Exception e) {
